@@ -1,10 +1,8 @@
 - hosts: "{{ hosts }}"
-
   become: yes
   tasks:
-    # Upgrade packages
-    - name: upgrade apt packages
-      become: true
+    - name: Upgrade apt packages
       apt:
-        upgrade: yes
+        upgrade: dist
         update_cache: yes
+
